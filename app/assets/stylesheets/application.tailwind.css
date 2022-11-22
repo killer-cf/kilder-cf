@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply w-full font-jamjure h-[100%] box-border;
+  }
+  header {
+    @apply relative bg-gradient-to-r from-fpreto1 to-tpreto1 flex justify-center
+  }
+  section, footer{
+    @apply flex justify-center w-full
+  }
+  .btn-primary {
+    @apply py-2 px-4 bg-gradient-to-r from-flaranja to-tlaranja rounded-full font-semibold;
+  }
+  .container{
+    @apply  max-w-7xl w-full flex
+  }
+  .container-section1{
+    @apply lg:h-screen justify-center px-8
+  }
+  .container-section2{
+    @apply px-8 sm:px-12 py-14 lg:h-screen items-center
+  }
+  .container-section3{
+    @apply  justify-center items-center text-white px-12 py-14 flex-col
+  }
+  .container-footer{
+    @apply flex-col sm:flex-row items-center py-3
+  }
+  .skill{
+    @apply m-2 flex flex-col justify-center items-center
+  }
+  .star{
+    @apply  text-sm my-1 mr-1 text-tlaranja
+  }
+  .project{
+    @apply md:even:ml-4 my-4
+  }
+  .project-big-box {
+    @apply bg-[#1E1E1E] w-[260px] sm:w-[370px] h-[300px] flex justify-center items-center
+  }
+  .project-photo-box {
+    @apply bg-zinc-900 flex justify-center items-center w-[88%] h-[60%] shadow-lg shadow-black
+  }
+}

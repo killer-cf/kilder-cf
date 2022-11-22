@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kildercf</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Montserrat&family=Yellowtail&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="container absolute top-0 text-white px-6  py-2 h-[48px] space-x-2 justify-between items-center">
+        <div class="logo">
+          <h1 class="text-flaranja text-3xl font-bold font-yellowtail">Kilder-cf</h1>
+        </div>
+        <div class="flex space-x-6">
+          <div class="">
+            <%= link_to 'Home', root_path, class:'ItemMenu cursor-pointer font-semibold hover:text-flaranja' %>
+          </div>
+          <div class="ItemMenu cursor-pointer">
+            <%= link_to 'Sobre', '#about', class:'ItemMenu cursor-pointer font-semibold hover:text-flaranja' %>
+          </div>
+          <div class="ItemMenu cursor-pointer">
+            <%= link_to 'Projetos', '#projects', class:'ItemMenu cursor-pointer font-semibold hover:text-flaranja' %>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>

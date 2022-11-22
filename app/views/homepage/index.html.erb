@@ -1,0 +1,298 @@
+<section class='section1 bg-gradient-to-r from-black to-tpreto2'>
+  <div class="container-section1 container">
+      <div class="md:w-[55%] my-36 py-5 text-white flex flex-col justify-center items-center">
+        <div>
+          <p class='font-semibold text-xl'>Olá, Meu nome é</p>
+          <h1 class='font-extrabold text-7xl'>Madson Kilder</h1>
+          <div class='flex pt-2 mb-5'>
+            <div class='line w-7 border-t-2 border border-tlaranja self-center mr-1'></div>
+            <p class='font-semibold text-lg sm:text-xl'>Desenvolvedor Web Full-Stack</p>
+          </div>
+          <%= link_to 'Contato', "#contact", class: 'btn-primary'%>
+        </div>
+      </div>
+      <div class="w-[45%] text-white justify-center items-end md:flex hidden">
+        <%= image_tag 'kilder', class:'w-[100%] opacity-80'%>
+      </div>
+  </div>
+</section>
+<!--section 1 end-->
+<section id='about' class='section2 bg-tpreto1'>
+  <div class='container-section2 container'>
+    <div class='photo_section2 lg:w-[40%] hidden lg:flex flex-col justify-center  items-center'>
+      <div class='w-[340px] h-[322px] bg-gradient-to-r from-tpreto2 to-zinc-900 '>
+        <%= image_tag 'kilder', class:'border border-tpreto1 border-8 shadow-md shadow-zinc-900'%>
+      </div>
+      <div class='flex self-baseline space-x-3 pl-16'>   
+        <%= link_to "https://github.com/killer-cf", target: :_blank, title:'git_link1' do %>
+          <i class="fa-brands fa-github pt-4 text-3xl text-tlaranja hover:text-flaranja"></i>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/in/madson-kilder-filho-63026b21a/", target: :_blank do %>
+          <i class="linkedin_link1 fa-brands fa-linkedin pt-4 text-3xl text-tlaranja hover:text-flaranja"></i>
+        <% end %>
+      </div>
+    </div>
+    <!--photo_section 2 end -->
+
+    <div class='who_i_am text-white lg:w-[60%] px-4'>
+      <div class='flex flex-shrink-0'>
+        <div class='line w-7 border-t-2 border border-tlaranja self-center mr-1'></div>
+        <div class=' font-semibold text-sm'>
+          <p>SOBRE MIM</p>       
+        </div>
+      </div>
+      <!--line end-->
+
+      <div class=''>
+        <h2 class='pb-6 font-bold text-2xl'>Quem Eu Sou</h2>
+        <p class=' text-md'>Olá, meu nome é Madson Kilder, Resido em Recife, Brasil. Sou desenvolvedor Full Stack, estudo ADS, 3° período.</p>
+        
+        <p class=' text-md'>Sou muito apaixonado e dedicado a programação web.
+        E já com um bom tempo de estudo e prática, tenho conhecimento para construir uma aplicação completa e com muitas funcionalidades 
+        desde da construção a partir de um design até o back end e banco de dados.</p>
+
+        <div class='skills mt-6 bg-[#333333] p-3 grid grid-cols-2 sm:grid-cols-3'>
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>Ruby on Rails</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>React</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>HTML 5</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>Testes - TDD</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>Javascript</p>
+              <div class='flex'>
+              <% 3.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star-half-stroke"></i>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>API</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>OO</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>CSS 3</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+
+          <div class='skill'>
+            <div>
+              <p class='font-semibold'>Clean Code</p>
+              <div class='flex'>
+              <% 4.times { %>
+                <i class="star fa-solid fa-star"></i>
+              <% } %>
+              <i class="star fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!--skill end-->
+        </div>
+        <!--skills end-->
+        <div class='mt-6'>
+          <%= link_to 'BAIXAR CV', Download.last.curriculum, class:'btn-primary' if Download.last && Download.last.curriculum.attached? %>
+        </div>
+      </div>
+    </div>
+    <!--who_i_am end-->
+  </div>
+</section>
+<!--section 2 end-->
+
+<section id='projects' class='section3 bg-black'>
+  <div class='container-section3 container'>
+    <div class='flex flex-col justify-center items-center'>
+      <div>
+        <h2 class='font-bold text-3xl'>Projetos realizados</h2>
+        <div class='flex'>
+          <div class='line w-7 border-t-2 border border-tlaranja self-center mr-1'></div>
+          <div class=' font-semibold text-sm'>
+            <p>OQUE POSSO FAZER</p>       
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='projects flex flex-wrap justify-center max-w-4xl pt-6'>
+
+      <div class='project'>
+        <div class='project-big-box'>
+          <div class='project-photo-box'>
+            <h2 class='font-bold text-2xl'>EM BREVE</h2>
+          </div>
+        </div>
+        <h2 class='font-semibold text-xl pt-1'>Warehouse</h2>
+        <%= link_to '#' do %>
+          <p class='font-semibold text-tlaranja text-sm'>VEJA MAIS <i class="fa-solid fa-arrow-right text-tlaranja"></i></p>
+        <% end %>
+      </div>
+
+      <div class='project'>
+        <div class='project-big-box'>
+          <div class='project-photo-box'>
+            <h2 class='font-bold text-2xl'>EM BREVE</h2>
+          </div>
+        </div>
+        <h2 class='font-semibold text-xl pt-1'>MarketPlace</h2>
+        <%= link_to '#' do %>
+          <p class='font-semibold text-tlaranja text-sm'>VEJA MAIS <i class="fa-solid fa-arrow-right text-tlaranja"></i></p>
+        <% end %>
+      </div>
+
+      <div  class='project'>
+        <div class='project-big-box'>
+          <div class='project-photo-box'>
+            <h2 class='font-bold text-2xl'>EM BREVE</h2>
+          </div>
+        </div>
+        <h2 class='font-semibold text-xl pt-1'>Delivery System</h2>
+        <%= link_to '#' do %>
+          <p class='font-semibold text-tlaranja text-sm'>VEJA MAIS <i class="fa-solid fa-arrow-right text-tlaranja"></i></p>
+        <% end %>
+      </div>
+
+      <div  class='project'>
+        <div class='project-big-box'>
+          <div class='project-photo-box'>
+            <h2 class='font-bold text-2xl'>EM BREVE</h2>
+          </div>
+        </div>
+        <h2 class='font-semibold text-xl pt-1'>MyMoneyAPP</h2>
+        <%= link_to '#' do %>
+          <p class='font-semibold text-tlaranja text-sm'>VEJA MAIS <i class="fa-solid fa-arrow-right text-tlaranja"></i></p>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id='contact' class='bg-zinc-800'>
+  <div class='container-section4 container text-white justify-center flex-col items-center py-10 px-8'>
+    <h2 class='font-bold text-3xl'>Contato</h2>
+    <div class='w-full flex justify-center pt-6'>
+      <div class='max-w-2xl'>
+        <div>
+          <p>Sinta-se a vontade para entrar em contato comigo, será um prazer atende-lo.</p>
+          <p>Estou disponível todos os dias.</p>
+        </div>
+        <div class='flex flex-col sm:flex-row flex-wrap pt-3'>
+          <div class='sm:w-1/2 pt-5 sm:order-1 order-4'>
+            <i class="fa-solid fa-phone text-xl pt-1 text-tlaranja"></i><span>  (81) 98131-6988</span>
+          </div>
+          <div class='sm:w-1/2 pt-5 order-2'>
+            <%= link_to "https://github.com/killer-cf", target: :_blank, title:'git_link1' do %>
+              <i class="fa-brands fa-github text-xl pt-1 text-tlaranja hover:text-flaranja"></i><span class='underline'>  https://github.com/killer-cf</span>
+            <% end %>
+          </div>
+          <div class='sm:w-1/2 pt-5 order-3'>
+            <i class="fa-solid fa-at text-xl pt-1 text-tlaranja"></i><span>  costa.kilder@live.com</span>
+          </div>
+          <div class='sm:w-1/2 sm:order-4 order-1 pt-5'>
+            <%= link_to "https://github.com/killer-cf", target: :_blank, title:'git_link1' do %>
+              <i class="fa-brands fa-linkedin text-xl pt-1 text-tlaranja hover:text-flaranja"></i><span class='underline'>  https://linkedin.com/in/madson-kilder-filho</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class='bg-zinc-900'>
+  <div class='container-footer container justify-around'>
+    <div class="flex space-x-2 items-center">
+      <h1 class="text-flaranja text-xl font-bold font-yellowtail">Kilder-cf</h1>
+
+        <%= link_to "https://github.com/killer-cf", target: :_blank, title:'git_link1' do %>
+          <i class="fa-brands fa-github text-xl pt-1 text-tlaranja hover:text-flaranja"></i>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/in/madson-kilder-filho-63026b21a/", target: :_blank do %>
+          <i class="fa-brands fa-linkedin text-xl pt-1 text-tlaranja hover:text-flaranja"></i>
+        <% end %>
+    </div>
+    <div>
+      <p class='font-semibold text-tlaranja'>© 2022 Kilder-cf - Desenvolvido por kilder-cf</p>
+    </div>
+  </div>
+</footer>
