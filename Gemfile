@@ -77,6 +77,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 2.0'
   gem "capistrano-rails", "~> 1.6", require: false
+  gem "capistrano3-unicorn"
 end
 
 group :test do
@@ -86,5 +87,6 @@ group :test do
 end
 
 group :production do
+  gem "unicorn"
   gem "mysql2" # , '~> 0.3.18'
 end
