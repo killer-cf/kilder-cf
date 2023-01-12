@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_16_200446) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_08_192930) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -45,6 +45,29 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_16_200446) do
     t.string "name"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects_tools", id: false, force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "tool_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_projects_tools_on_project_id"
+    t.index ["tool_id"], name: "index_projects_tools_on_tool_id"
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "projects_tools", "projects"
+  add_foreign_key "projects_tools", "tools"
 end
