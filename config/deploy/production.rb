@@ -11,7 +11,9 @@ role :app, %w{deploy@192.168.1.55}
 role :web, %w{deploy@192.168.1.55}
 role :db, %w{deploy@192.168.1.55}
 
-
+set :server_address, '192.168.1.55'
+set :"kilder-cf", fetch(:server_address)
+set :puma_preload_app, true
 # role-based syntax
 # ==================
 
