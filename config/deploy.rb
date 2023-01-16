@@ -33,6 +33,6 @@ namespace :puma do
     end
   end
 
-  before :start, :create_dirs
-  after :start, :nginx_restart
+  before 'bundler:install', :create_dirs
+  after 'deploy:finished', :nginx_restart
 end
