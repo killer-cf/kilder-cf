@@ -6,12 +6,11 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
-role :app, %w{deploy@192.168.1.55}
-role :web, %w{deploy@192.168.1.55}
-role :db, %w{deploy@192.168.1.55}
-
 set :server_address, '192.168.1.55'
+
+ask(:password, nil, echo: false)
+server fetch(:server_address), user: "deploy", roles: %w{app db web}
+
 set :"kilder-cf", fetch(:server_address)
 set :puma_preload_app, true
 # role-based syntax
