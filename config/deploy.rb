@@ -5,6 +5,7 @@ set :rvm_custom_path, "/usr/share/rvm"
 set :branch, 'capistrano-deploy'
 set :keep_releases, 5
 set :format, :airbrussh
+set :migration_role, :app
 set :log_level, :debug
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
