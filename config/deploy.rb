@@ -30,7 +30,7 @@ namespace :puma do
   desc "Restart Nginx"
   task :nginx_restart do
     on roles(:app) do
-      execute "sudo service nginx restart"
+      execute :sudo, :systemctl, :restart, :nginx
     end
   end
 
