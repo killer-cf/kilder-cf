@@ -10,7 +10,6 @@ set :server_address, '192.168.1.55'
 
 server fetch(:server_address), user: "deploy", roles: %w{app db web}
 
-set :"kilder-cf", fetch(:server_address)
 # role-based syntax
 # ==================
 
