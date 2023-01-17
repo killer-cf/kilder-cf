@@ -8,7 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 set :server_address, '192.168.1.55'
 
-ask(:password, nil, echo: false)
+#ask(:password, nil, echo: false)
 server fetch(:server_address), user: "deploy", roles: %w{app db web}
 
 set :"kilder-cf", fetch(:server_address)
