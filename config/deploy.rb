@@ -27,13 +27,13 @@ namespace :puma do
     end
   end
 
-  desc "Restart Nginx"
-  task :nginx_restart do
-    on roles(:app) do
-      execute :sudo, :systemctl, :restart, :nginx
-    end
-  end
+  #desc "Restart Nginx"
+  #task :nginx_restart do
+  #  on roles(:app) do
+  #    execute :sudo, :systemctl, :restart, :nginx
+  #  end
+  #end
 
   before 'bundler:install', :create_dirs
-  after 'deploy:finished', :nginx_restart
+  #after 'deploy:finished', :nginx_restart
 end
