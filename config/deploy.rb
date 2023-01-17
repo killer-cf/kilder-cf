@@ -8,6 +8,8 @@ set :format, :airbrussh
 set :migration_role, :app
 set :log_level, :debug
 set :user, 'deploy'
+set :pty,             true
+#set :use_sudo,        false
 set :stage,           :production
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
