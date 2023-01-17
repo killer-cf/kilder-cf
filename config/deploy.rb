@@ -7,6 +7,7 @@ set :keep_releases, 5
 set :format, :airbrussh
 set :migration_role, :app
 set :log_level, :debug
+set :pty, true
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
