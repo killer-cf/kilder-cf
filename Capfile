@@ -1,7 +1,8 @@
 require "capistrano/setup"
 require "capistrano/deploy"
 require "capistrano/scm/git"
-require 'Capistrano/passenger'
+require "whenever/capistrano"
+require 'capistrano/passenger'
 require "capistrano/rails"
 require "capistrano/rvm"
 require "capistrano/bundler"
