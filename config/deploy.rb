@@ -11,7 +11,7 @@ set :log_level, :debug
 set :pty, true
 set :use_sudo, false
 set :stage, :production
-set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
+#set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
