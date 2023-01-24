@@ -16,9 +16,11 @@ set :passenger_roles, :app
 #set :socket_binding_port, '3000'
 
 #set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
-
+set :passenger_environment_variables, {
+  'PASSENGER_INSTANCE_REGISTRY_DIR' => '/tmp'
+}
 set :passenger_restart_command, 'passenger-config restart-app'
-set :passenger_restart_options, -> { "#{deploy_to}/current --ignore-app-not-running" }
+set :passenger_restart_options, -> { "#{deploy_to} --ignore-app-not-running" }
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
