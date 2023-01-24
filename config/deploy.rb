@@ -11,6 +11,7 @@ set :log_level, :debug
 set :pty, true
 set :use_sudo, false
 set :stage, :production
+set :passenger_roles, :app
 #set :socket_binding_ip, '127.0.0.1'
 #set :socket_binding_port, '3000'
 
@@ -30,5 +31,4 @@ namespace :deploy do
 
   after :finishing, :compile_assets
   after :finishing, :cleanup
-  after :finishing, :restart
 end
