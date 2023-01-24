@@ -17,7 +17,7 @@ set :passenger_roles, :app
 
 #set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :passenger_environment_variables, {
-  'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run/passenger-instreg'
+  'PASSENGER_INSTANCE_REGISTRY_DIR' => '/tmp'
 }
 set :passenger_restart_command, 'passenger-config restart-app'
 set :passenger_restart_options, -> { "#{deploy_to} --ignore-app-not-running" }
