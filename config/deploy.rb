@@ -20,15 +20,15 @@ set :passenger_roles, :app
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 
-namespace :deploy do
-  desc 'Initial Deploy'
-  task :initial do
-    on roles(:app) do
-      before 'deploy :restart'
-      invoke 'deploy'
-    end
-  end
-
-  after :finishing, :compile_assets
-  after :finishing, :cleanup
-end
+#namespace :deploy do
+#  desc 'Initial Deploy'
+#  task :initial do
+#    on roles(:app) do
+#      before 'deploy :restart'
+#      invoke 'deploy'
+#    end
+#  end
+#
+#  after :finishing, :compile_assets
+#  after :finishing, :cleanup
+#end
