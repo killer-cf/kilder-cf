@@ -11,8 +11,8 @@ set :log_level, :debug
 set :pty, true
 set :use_sudo, false
 set :stage, :production
-set :socket_binding_ip, '127.0.0.1'
-set :socket_binding_port, '3000'
+#set :socket_binding_ip, '127.0.0.1'
+#set :socket_binding_port, '3000'
 
 #set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 
@@ -23,7 +23,7 @@ namespace :deploy do
   desc 'Initial Deploy'
   task :initial do
     on roles(:app) do
-      before 'deploy:restart'
+      before 'deploy :restart'
       invoke 'deploy'
     end
   end
