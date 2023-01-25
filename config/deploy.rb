@@ -1,7 +1,7 @@
 set :application, 'kilder-cf'
 set :repo_url, 'https://github.com/killer-cf/kilder-cf.git' # repositório git do seu projeto
 set :deploy_to, '/var/www/kilder-cf'
-set :rvm_custom_path, "/usr/share/rvm/bin"
+set :rvm_custom_path, "/usr/share/rvm"
 set :branch, 'capistrano-deploy'
 set :keep_releases, 5
 set :user, 'deploy'
