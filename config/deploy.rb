@@ -12,6 +12,7 @@ set :pty, true
 set :use_sudo, false
 set :stage, :production
 set :passenger_roles, :app
+set :rvm_ruby_version, '3.1.0'
 set :passenger_environment_variables, {
   'PASSENGER_INSTANCE_REGISTRY_DIR' => '/tmp'
 }
