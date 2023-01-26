@@ -12,15 +12,11 @@ set :pty, true
 set :use_sudo, false
 set :stage, :production
 set :passenger_roles, :app
-#set :socket_binding_ip, '127.0.0.1'
-#set :socket_binding_port, '3000'
-
-#set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :passenger_environment_variables, {
   'PASSENGER_INSTANCE_REGISTRY_DIR' => '/tmp'
 }
-set :passenger_restart_command, 'passenger-config restart-app'
-set :passenger_restart_options, -> { "#{deploy_to} --ignore-app-not-running" }
+set :passenger_restart_command, '/etc/init.d/passenger-kilder-cf.sh restart'
+set :passenger_restart_options, -> { "kilder-cf 3000" }
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
