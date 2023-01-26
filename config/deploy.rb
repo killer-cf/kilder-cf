@@ -16,20 +16,19 @@ set :rvm_ruby_version, '3.1.0'
 set :passenger_environment_variables, {
   'PASSENGER_INSTANCE_REGISTRY_DIR' => '/tmp'
 }
-set :passenger_restart_command, '/etc/init.d/passenger-kilder-cf.sh restart'
-set :passenger_restart_options, -> { "kilder-cf 3000" }
+#set :passenger_restart_command, '/etc/init.d/passenger-kilder-cf.sh restart'
+#set :passenger_restart_options, -> { "kilder-cf 3000" }
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 
 namespace :deploy do
-  #desc 'Initial Deploy'
-  #task :initial do
-  # on roles(:app) do
-  #    before 'deploy:restart'
-  #    invoke 'deploy'
-  #  end
-  #end
+  desc 'restarting app'
+  task :restart do
+   on roles(:app) do
+      execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
+    end
+  end
 
   after :finishing, :compile_assets
   after :finishing, :cleanup
