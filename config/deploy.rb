@@ -24,7 +24,7 @@ append :linked_dirs, "storage", "log", "tmp", "public/system"
 
 namespace :deploy do
   desc 'restarting app'
-  task passenger:restart do
+  task :restart => :restart_my do
     on roles(:app) do
       execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
     end
