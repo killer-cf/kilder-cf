@@ -22,15 +22,14 @@ append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 
 namespace :deploy do
-  desc 'Initial Deploy'
-  task :initial do
-    on roles(:app) do
-      before 'deploy:restart'
-      invoke 'deploy'
-    end
-  end
+  #desc 'Initial Deploy'
+  #task :initial do
+  # on roles(:app) do
+  #    before 'deploy:restart'
+  #    invoke 'deploy'
+  #  end
+  #end
 
   after :finishing, :compile_assets
   after :finishing, :cleanup
-  after :finishing, :restart
 end
