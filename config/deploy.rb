@@ -23,8 +23,9 @@ append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 
 namespace :deploy do
+  Rake::Task["passenger:restart"].clear_actions
   desc 'restarting app'
-  task :restart => :restart_my do
+  task :restart do
     on roles(:app) do
       execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
     end
