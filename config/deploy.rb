@@ -25,7 +25,8 @@ namespace :deploy do
   desc 'restarting app'
   task :restart do
     on roles(:app) do
-      execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
+      execute 'sudo service kilder-cf restart'
+      #execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
     end
   end
 
