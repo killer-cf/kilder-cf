@@ -173,9 +173,6 @@ GEM
     nokogiri (1.14.0-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    passenger (6.0.16)
-      rack
-      rake (>= 0.8.1)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -255,6 +252,8 @@ GEM
     sshkit (1.21.3)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    sshkit-sudo (0.1.0)
+      sshkit (~> 1.8)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.21-x86_64-linux)
@@ -309,7 +308,6 @@ DEPENDENCIES
   jbuilder
   mysql2
   net-ssh (= 7.0.0.beta1)
-  passenger
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   rspec-rails
@@ -317,6 +315,7 @@ DEPENDENCIES
   shoulda-matchers
   sprockets-rails
   sqlite3 (~> 1.4)
+  sshkit-sudo
   stimulus-rails
   tailwindcss-rails (~> 2.0)
   turbo-rails
