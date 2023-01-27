@@ -53,9 +53,6 @@ gem "font-awesome-sass", "~> 6.2.1"
 gem "ed25519", ">= 1.2", "< 2.0"
 gem "bcrypt_pbkdf", ">= 1.0", "< 2.0"
 gem 'net-ssh', '7.0.0.beta1'
-
-gem 'sshkit-sudo'
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 
