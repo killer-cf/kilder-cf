@@ -22,7 +22,6 @@ namespace :deploy do
   desc 'restarting app'
   task :restart do
     on roles(:app) do
-      echo 'restart app on machine with /etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
     end
   end
 
