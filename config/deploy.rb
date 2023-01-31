@@ -14,9 +14,6 @@ set :stage, :production
 set :passenger_roles, :app
 set :rvm_ruby_version, '3.1.0'
 set :rails_env, 'production'
-#set :passenger_restart_command, '/etc/init.d/passenger-kilder-cf.sh restart'
-#set :passenger_restart_options, -> { "kilder-cf 3000" }
-
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "storage", "log", "tmp", "public/system"
 
@@ -25,7 +22,7 @@ namespace :deploy do
   desc 'restarting app'
   task :restart do
     on roles(:app) do
-      execute '/etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
+      echo 'restart app on machine with /etc/init.d/passenger-kilder-cf.sh restart kilder-cf 3000'
     end
   end
 
